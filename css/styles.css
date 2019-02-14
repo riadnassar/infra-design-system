@@ -1,0 +1,102 @@
+/* ==========================================================================
+   Color
+   ========================================================================== */
+html {
+	/*Infra-Black*/
+	--color-primary: #000;
+	--color-primary-light: #2c2c2c;
+
+	/*Laser-Red*/
+	--color-secondary: #ff0111;
+	--color-secondary-dark: #c20000;
+	--color-secondary-light: #ff5a3f;
+
+	/*Ultra-White*/
+	--color-tertiary: #fff;
+	--color-tertiary-dark: #ccc;
+
+	/*Disabled Text*/
+	--color-disabled-dark: #9b9b9b;
+	--color-disabled-light: #555555;
+
+}
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+html {
+	
+
+    --font-primary: 'Open Sans', Arial, sans-serif;
+    --font-secondary: 'Orbitron', Arial, sans-serif;
+
+	color: var(--color-primary);
+	font-family: var(--font-primary);
+}
+
+a {
+	color: var(--color-secondary);
+	padding: 10px;
+	text-decoration: none;
+}
+
+a:visited {
+	color: var(--color-secondary-dark);
+}
+
+a:hover {
+	color: var(--color-secondary-light);
+	text-decoration: underline;
+}
+
+h1,h2,h3,h4,h5,h6,text,.logo,.secondary-font{
+	font-family: var(--font-secondary);
+}
+
+main {
+	margin:auto;
+	max-width: 80%;
+}
+
+nav ul {
+	list-style-type: none;
+}
+
+nav li {
+	display: inline;
+}
+
+p {
+	line-height: 2rem;
+}
+
+.logo{
+	font-size: 100px;
+	font-weight: bold;
+}
+
+.primary-font {
+	font-family: var(--font-primary);
+}
+
+/* ==========================================================================
+   Header Component
+   ========================================================================== */
+header {
+	background-color: var(--color-primary);
+	color: var(--color-tertiary);
+	padding: 2rem;
+}
+
+header nav li {
+	border: solid 1px var(--color-secondary);
+	border-radius: 10px
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer {
+	background-color: var(--color-primary-light);
+	color: var(--color-tertiary);
+	padding: 2rem;
+}
