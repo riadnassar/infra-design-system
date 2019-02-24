@@ -12,15 +12,12 @@
 
 	</head>
 
-	<!-- body needs a header, main, and a footer -->
 	<body>
 
-	<!-- Header with name of Design System and primary site navigation. Design System name needs to be a div with the class "logo". -->
 		<header>
 			
 			<div class="logo">Infra</div>
 			
-			<!-- primary site navigation will be a nav with the class "site-nav" with an ul that has 4 li: Home, Style, Components, and layout. These will link to other pages on our site -->
 			<nav class="site-nav">
 				
 				<ul>
@@ -33,10 +30,8 @@
 			
 		</header>
 
-		<!-- main will have sections for the colors being used-->
 		<main>
 		
-			<!-- Design system with a subsection for all three colors-->
 
 			<h1>Infra Styles</h1>
 
@@ -178,9 +173,11 @@
 				<h2>Typography</h2>
 
 				<h3>Font Families</h3>
-
-				<p> Primary Font: <span class="primary-font"> Open Sans </span></p>
-				<p>Secondary Font: <span class="secondary-font"> Orbitron </span></p>
+				
+				<figure>
+					<p> Primary Font: <span class="primary-font"> Open Sans </span></p>
+					<p>Secondary Font: <span class="secondary-font"> Orbitron </span></p>
+				</figure>
 
 				<h3>Headings</h3>
 
@@ -196,78 +193,87 @@
 				<h3>Body Text</h3>
 
 				<h4>Featured Text</h4>
-
-				<p class="featured-text"> Feature text is body text that is important. It can be introductory text or it can show up in a hero banner. It is slightly larger than normal text and is in italics.</p>
+				
+				<figure>	
+					<p class="featured-text"> Feature text is body text that is important. It can be introductory text or it can show up in a hero banner. It is slightly larger than normal text and is in italics.</p>
+				</figure>
 
 				<h4>Normal Text</h4>
-
-				<p> Normal text is the common body text you find thourout your site. It's uses all the default settings. It can have <a href="">Links</a>, <em>italic text</em>, and even <strong>bold text</strong>.</p>
+				
+				<figure>	
+					<p> Normal text is the common body text you find thourout your site. It's uses all the default settings. It can have <a href="">Links</a>, <em>italic text</em>, and even <strong>bold text</strong>.</p>
+				</figure>
 
 				<h4>Ordered and Unordered Lists</h4>
-
-				<p>There are 2 types of lists: Ordered and Unordered</p>
-
 				
-				<ul> Unordered list
-					<li>Unordered list in an Unordered List
-						<ul>
-							<li>Sub-item 1</li>
-							<li>Sub-item 2</li>
-							<li>Sub-item 3</li>
-						</ul>
-					</li>
+				<figure>
+					<p>There are 2 types of lists: Ordered and Unordered</p>
+				</figure>
 
-					<li>Ordered list in an Unordered List
-						<ol>
-							<li>Sub-item 1</li>
-							<li>Sub-item 2</li>
-							<li>Sub-item 3</li>
-						</ol>
-					</li>
-				</ul>
+				<figure>
+					<ul> Unordered list
+						<li>Unordered list in an Unordered List
+							<ul>
+								<li>Sub-item 1</li>
+								<li>Sub-item 2</li>
+								<li>Sub-item 3</li>
+							</ul>
+						</li>
 
-				<ol> Ordered list
-					<li>Ordered list in an Ordered List
-						<ol>
-							<li>Sub-item 1</li>
-							<li>Sub-item 2</li>
-							<li>Sub-item 3</li>
-						</ol>
-					</li>
-						
-					<li>Unordered list in an Ordered List
-						<ul>
-							<li>Sub-item 1</li>
-							<li>Sub-item 2</li>
-							<li>Sub-item 3</li>
-						</ul>
-					</li>
-				</ol>
+						<li>Ordered list in an Unordered List
+							<ol>
+								<li>Sub-item 1</li>
+								<li>Sub-item 2</li>
+								<li>Sub-item 3</li>
+							</ol>
+						</li>
+					</ul>
+
+					<ol> Ordered list
+						<li>Ordered list in an Ordered List
+							<ol>
+								<li>Sub-item 1</li>
+								<li>Sub-item 2</li>
+								<li>Sub-item 3</li>
+							</ol>
+						</li>
+							
+						<li>Unordered list in an Ordered List
+							<ul>
+								<li>Sub-item 1</li>
+								<li>Sub-item 2</li>
+								<li>Sub-item 3</li>
+							</ul>
+						</li>
+					</ol>
+				</figure>
 
 				<h4>Tertiary Text</h4>
-
-				<p class="tertiary-text">Tertiary text is for less important text. It's in the footer, captions and crediting authors.</p>
+				
+				<figure>
+					<p class="tertiary-text">Tertiary text is for less important text. It's in the footer, captions and crediting authors.</p>
+				</figure>
 
 				<h3>Block Quotes</h3>
+				
+				<figure>
+					
+					<blockquote>
+						<p>Block quotes are where you are going to put quotes. They will be 2 sizes larger than regular text and will have a citation that is one size smaller than it. It will be bold and italic in Orbitron. The Citation will be in Open Sans</p>
+						<cite>-Riad Nassar</cite>
+					</blockquote>
 
-				<blockquote>
-					<p>Block quotes are where you are going to put quotes. They will be 2 sizes larger than regular text and will have a citation that is one size smaller than it. It will be bold and italic in Orbitron. The Citation will be in Open Sans</p>
-					<cite>-Riad Nassar</cite>
-				</blockquote>
+				</figure>
 
 			</section>
 		</main>
 
-		<!-- Footer needs 4 things: Credit line, Short Professional Bio, Nav list of Pro Links, Copyright statement -->
 		<footer class="tertiary-text">
 			
-			<!-- Credit line should have name on it -->
 			<p>Infra Design System was created by Riad Nassar. Any similarities to other design systems is purely coincidental.</p>
 
-			<!-- Short Bio -->
 			<p>Riad Nassar is a User Experience Designer. He has an interest in Interaction Design, especially Human-Robot Interaction. He has a background in Psychology and Computer Science. When he's not designing, he likes to Judge local Robotics Competitions.</p>
 
-			<!-- This nav will take us to different professional sites, so it should have a class called professional-nav -->
 			<nav class="professional-nav">
 				<ul>
 					<li><a href="https://www.linkedin.com/in/riad-nassar-10a75497">Linkedin</a></li>

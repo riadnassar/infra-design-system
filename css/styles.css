@@ -41,7 +41,7 @@ html {
     --large-font: calc(var(--medium-font) * var(--ratio));
     
 	/*normal font size*/
-    --medium-font: 16px;
+    --medium-font: 1rem;
     
 	/*smaller than normal*/
     --small-font: calc(var(--medium-font) / var(--ratio));
@@ -79,12 +79,12 @@ a:active {
 
 a:focus {
 	background-color: var(--color-secondary);
-	border: solid 1px var(--color-tertiary);
-	border-radius: 10px;
+	border: solid 0.0625rem var(--color-tertiary);
+	border-radius: 0.625rem;
 	color: var(--color-tertiary);
 }
 
-h1,h2,h3,h4,h5,h6,text,.logo {
+h1, h2, h3, h4, h5, h6,text, .logo {
 	font-family: var(--font-secondary);
 }
 
@@ -118,11 +118,6 @@ h6{
 	font-size: var(--large-font);
 }
 
-main {
-	margin:auto;
-	max-width: 65rem;
-}
-
 nav li {
 	display: inline;
 }
@@ -133,7 +128,7 @@ p {
 
 ol, ul {
 	list-style-position: inside;
-	margin-bottom: 10px;
+	margin-bottom: 0.625rem;
 }
 
 ol{
@@ -145,11 +140,17 @@ ul {
 }
 
 .logo {
-	font-size: 100px;
+	font-size: 6.25rem;
 	font-weight: bold;
 }
 
-
+/* ==========================================================================
+   Master Layout
+   ========================================================================== */
+main {
+	margin:auto;
+	max-width: 65rem;
+}
 
 /* ==========================================================================
    Header Component
@@ -161,18 +162,18 @@ header {
 }
 
 header nav li {
-	border: solid 1px var(--color-secondary);
-	border-radius: 10px;
+	border: solid 0.0625rem var(--color-secondary);
+	border-radius: 0.625rem;
 }
 
-header nav li a {
-	padding: 0 10px;
+header nav a {
+	padding: 0 0.625rem;
 }
 
-header nav li a:focus {
+header nav a:focus {
 	background-color: var(--color-secondary);
-	border: solid 1px var(--color-tertiary);
-	border-radius: 1000px;
+	border: solid 0.0625rem var(--color-tertiary);
+	border-radius: 62.5px;
 	color: var(--color-tertiary);
 }
 
@@ -182,6 +183,7 @@ header nav li a:focus {
 footer {
 	background-color: var(--color-primary-light);
 	color: var(--color-tertiary);
+	margin-top: 2rem;
 	padding: 2rem;
 }
 
@@ -190,17 +192,21 @@ footer nav ul {
 }
 
 footer nav a {
-	padding: 0 10px;
+	padding: 0 0.625rem;
 }
 
 /* ==========================================================================
    Examples
    ========================================================================== */
-blockquote{
+blockquote {
 	font-family: var(--font-secondary);
 	font-size: var(--xlarge-font);
 	font-style: italic;
 	font-weight: bold;
+}
+
+blockquote p {
+	line-height: 1.75;
 }
 
 cite {
@@ -208,8 +214,9 @@ cite {
 }
 
 figure {
-	background-color: var(--color-tertiary-dark);
-	padding: 10px;
+	border-left: 0.0625rem solid var(--color-secondary-dark);
+	border-right: 0.0625rem solid var(--color-secondary-dark);
+	padding: 0.625rem;
 }
 
 .featured-text {
