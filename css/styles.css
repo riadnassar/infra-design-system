@@ -67,21 +67,14 @@ a:visited {
 	color: var(--color-secondary-dark);
 }
 
-a:hover {
+a:hover, a:focus {
 	color: var(--color-secondary-light);
 	text-decoration: underline;
 }
 
 a:active {
-	color: var(--color-tertiary);
-	font-weight: bolder;
-}
-
-a:focus {
-	background-color: var(--color-secondary);
-	border: solid 0.0625rem var(--color-tertiary);
-	border-radius: 0.625rem;
-	color: var(--color-tertiary);
+	color: var(--color-primary-light);
+	text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6,text, .logo {
@@ -139,6 +132,21 @@ ul {
 	list-style-type: circle;
 }
 
+blockquote {
+	font-family: var(--font-secondary);
+	font-size: var(--xlarge-font);
+	font-style: italic;
+	font-weight: bold;
+}
+
+blockquote p {
+	line-height: 1.75;
+}
+
+cite {
+	font-size: var(--large-font);
+}
+
 .logo {
 	font-size: 6.25rem;
 	font-weight: bold;
@@ -170,7 +178,7 @@ header nav a {
 	padding: 0 0.625rem;
 }
 
-header nav a:focus {
+header nav a:hover, header nav a:focus {
 	background-color: var(--color-secondary);
 	border: solid 0.0625rem var(--color-tertiary);
 	border-radius: 62.5px;
@@ -195,23 +203,149 @@ footer nav a {
 	padding: 0 0.625rem;
 }
 
+footer nav a:active {
+	color: var(--color-tertiary);
+}
+
+/* ==========================================================================
+   Button Links
+   ========================================================================== */
+
+/*Hero Button*/
+.hero-button-light, .hero-button-light:visited {
+	background-color: var(--color-secondary);
+	box-shadow: 0.3125rem 0.625rem var(--color-tertiary-dark);
+	color: var(--color-tertiary);
+	font-weight: bold;
+	padding: 1rem 3rem;
+	transition: all .5s ease;
+}
+
+.hero-button-light:hover, .hero-button-light:focus {
+	background-color: var(--color-teriary);
+	box-shadow: 0.625rem 0.3125rem var(--color-tertiary-dark);
+	border: 0.0625rem solid var(--color-secondary);
+	color: var(--color-secondary);
+	text-decoration: none;
+	transition: all .5s ease;
+}
+
+.hero-button-light:active {
+	background-color: var(--color-secondary-dark);
+	box-shadow: 0.125rem 0.125rem var(--color-tertiary-dark);
+	color: var(--color-tertiary);
+}
+
+.hero-button-dark, .hero-button-dark:visited {
+	background-color: var(--color-secondary);
+	box-shadow: 0.3125rem 0.625rem var(--color-tertiary-dark);
+	color: var(--color-primary);
+	font-weight: bold;
+	padding: 1rem 3rem;
+	transition: all .5s ease;
+}
+
+.hero-button-dark:hover, .hero-button-dark:focus {
+	background-color: var(--color-primary);
+	box-shadow: 0.625rem 0.3125rem var(--color-tertiary-dark);
+	border: 0.0625rem solid var(--color-secondary);
+	color: var(--color-secondary);
+	text-decoration: none;
+	transition: all .5s ease;
+}
+
+.hero-button-dark:active {
+	background-color: var(--color-secondary-dark);
+	box-shadow: 0.125rem 0.125rem var(--color-tertiary-dark);
+	color: var(--color-tertiary);
+}
+
+/*Normal Button*/
+
+.normal-button-light, .normal-button-light:visited {
+	background-color: var(--color-secondary);
+	border-radius: 0.625rem;
+	color: var(--color-tertiary);
+	padding: 1rem 1.5rem;
+	transition: all .5s ease;
+}
+
+.normal-button-light:hover, .normal-button-light:focus {
+	background-color: var(--color-teriary);
+	border: 0.0625rem solid var(--color-secondary);
+	color: var(--color-secondary);
+	text-decoration: none;
+	transition: all .5s ease;
+}
+
+.normal-button-light:active {
+	background-color: var(--color-secondary-dark);
+	color: var(--color-tertiary);
+}
+
+.normal-button-dark, .normal-button-dark:visited {
+	background-color: var(--color-secondary);
+	border-radius: 0.625rem;
+	color: var(--color-primary);
+	padding: 1rem 1.5rem;
+	transition: all .5s ease;
+}
+
+.normal-button-dark:hover, .normal-button-dark:focus {
+	background-color: var(--color-primary);
+	border: 0.0625rem solid var(--color-secondary);
+	color: var(--color-secondary);
+	text-decoration: none;
+	transition: all .5s ease;
+}
+
+.normal-button-dark:active {
+	background-color: var(--color-secondary-dark);
+	color: var(--color-tertiary);
+}
+
+/*Ghost Button*/
+
+.ghost-button-light, .ghost-button-light:visited {
+	background-color: transparent;
+	border: 0.0625rem solid var(--color-secondary);
+	border-radius: 0.625rem;
+	color: var(--color-secondary);
+	padding: 1rem 1.5rem;
+}
+
+.ghost-button-light:hover, .ghost-button-light:focus {
+	background-color: var(--color-secondary);
+	border: 0.0625rem solid var(--color-tertiary);
+	color: var(--color-tertiary);
+	text-decoration: none;
+}
+
+.ghost-button-light:active {
+	background-color: var(--color-secondary-dark);
+}
+
+.ghost-button-dark, .ghost-button-dark:visited {
+	background-color: transparent;
+	border: 0.0625rem solid var(--color-secondary);
+	border-radius: 0.625rem;
+	color: var(--color-secondary);
+	padding: 1rem 1.5rem;
+}
+
+.ghost-button-dark:hover, .ghost-button-dark:focus {
+	background-color: var(--color-secondary);
+	border: 0.0625rem solid var(--color-primary);
+	color: var(--color-primary);
+	text-decoration: none;
+}
+
+.ghost-button-dark:active {
+	background-color: var(--color-secondary-dark);
+}
 /* ==========================================================================
    Examples
    ========================================================================== */
-blockquote {
-	font-family: var(--font-secondary);
-	font-size: var(--xlarge-font);
-	font-style: italic;
-	font-weight: bold;
-}
-
-blockquote p {
-	line-height: 1.75;
-}
-
-cite {
-	font-size: var(--large-font);
-}
 
 figure {
 	border-left: 0.0625rem solid var(--color-secondary-dark);
