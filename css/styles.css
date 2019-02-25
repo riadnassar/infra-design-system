@@ -69,6 +69,7 @@ a:visited {
 
 a:hover, a:focus {
 	color: var(--color-secondary-light);
+	outline: none;
 	text-decoration: underline;
 }
 
@@ -181,8 +182,9 @@ header nav a {
 header nav a:hover, header nav a:focus {
 	background-color: var(--color-secondary);
 	border: solid 0.0625rem var(--color-tertiary);
-	border-radius: 62.5px;
+	border-radius: 62.5rem;
 	color: var(--color-tertiary);
+	outline: none;
 }
 
 /* ==========================================================================
@@ -218,15 +220,18 @@ footer nav a:active {
 	color: var(--color-tertiary);
 	font-weight: bold;
 	padding: 1rem 3rem;
+	-webkit-transition: all .5s ease;
 	transition: all .5s ease;
 }
 
 .hero-button-light:hover, .hero-button-light:focus {
 	background-color: var(--color-teriary);
-	box-shadow: 0.625rem 0.3125rem var(--color-tertiary-dark);
 	border: 0.0625rem solid var(--color-secondary);
+	box-shadow: 0.625rem 0.3125rem var(--color-tertiary-dark);
 	color: var(--color-secondary);
+	outline: none;
 	text-decoration: none;
+	-webkit-transition: all .5s ease;
 	transition: all .5s ease;
 }
 
@@ -242,15 +247,18 @@ footer nav a:active {
 	color: var(--color-primary);
 	font-weight: bold;
 	padding: 1rem 3rem;
+	-webkit-transition: all .5s ease;
 	transition: all .5s ease;
 }
 
 .hero-button-dark:hover, .hero-button-dark:focus {
 	background-color: var(--color-primary);
-	box-shadow: 0.625rem 0.3125rem var(--color-tertiary-dark);
 	border: 0.0625rem solid var(--color-secondary);
+	box-shadow: 0.625rem 0.3125rem var(--color-tertiary-dark);
 	color: var(--color-secondary);
+	outline: none;
 	text-decoration: none;
+	-webkit-transition: all .5s ease;
 	transition: all .5s ease;
 }
 
@@ -267,6 +275,7 @@ footer nav a:active {
 	border-radius: 0.625rem;
 	color: var(--color-tertiary);
 	padding: 1rem 1.5rem;
+	-webkit-transition: all .5s ease;
 	transition: all .5s ease;
 }
 
@@ -274,7 +283,9 @@ footer nav a:active {
 	background-color: var(--color-teriary);
 	border: 0.0625rem solid var(--color-secondary);
 	color: var(--color-secondary);
+	outline: none;
 	text-decoration: none;
+	-webkit-transition: all .5s ease;
 	transition: all .5s ease;
 }
 
@@ -288,6 +299,7 @@ footer nav a:active {
 	border-radius: 0.625rem;
 	color: var(--color-primary);
 	padding: 1rem 1.5rem;
+	-webkit-transition: all .5s ease;
 	transition: all .5s ease;
 }
 
@@ -295,7 +307,9 @@ footer nav a:active {
 	background-color: var(--color-primary);
 	border: 0.0625rem solid var(--color-secondary);
 	color: var(--color-secondary);
+	outline: none;
 	text-decoration: none;
+	-webkit-transition: all .5s ease;
 	transition: all .5s ease;
 }
 
@@ -310,14 +324,18 @@ footer nav a:active {
 	background-color: transparent;
 	border: 0.0625rem solid var(--color-secondary);
 	border-radius: 0.625rem;
+	box-shadow: inset 0 0 0 0 var(--color-secondary);
 	color: var(--color-secondary);
 	padding: 1rem 1.5rem;
+	-webkit-transition: ease-out 0.5s;
+	transition: ease-out 0.5s;
 }
 
 .ghost-button-light:hover, .ghost-button-light:focus {
-	background-color: var(--color-secondary);
 	border: 0.0625rem solid var(--color-tertiary);
+	box-shadow: inset 0 -6.25rem 0 0 var(--color-secondary);
 	color: var(--color-tertiary);
+	outline: none;
 	text-decoration: none;
 }
 
@@ -329,20 +347,120 @@ footer nav a:active {
 	background-color: transparent;
 	border: 0.0625rem solid var(--color-secondary);
 	border-radius: 0.625rem;
+	box-shadow: inset 0 0 0 0 var(--color-secondary);
 	color: var(--color-secondary);
 	padding: 1rem 1.5rem;
+	-webkit-transition: ease-out 0.5s;
+	transition: ease-out 0.5s;
 }
 
 .ghost-button-dark:hover, .ghost-button-dark:focus {
-	background-color: var(--color-secondary);
 	border: 0.0625rem solid var(--color-primary);
+	box-shadow: inset 0 -6.25rem 0 0 var(--color-secondary);
 	color: var(--color-primary);
+	outline: none;
 	text-decoration: none;
 }
 
 .ghost-button-dark:active {
 	background-color: var(--color-secondary-dark);
 }
+
+/* ==========================================================================
+   Accordian
+   ========================================================================== */
+
+details {
+	border: 0.125rem solid var(--color-secondary);
+	border-radius: 0.250rem;
+	margin-bottom: 0.125rem;
+}
+
+/*Light Theme Accordians*/
+
+.accordian-light {
+	background-color: var(--color-tertiary);
+	color: var(--color-primary);
+}
+
+.accordian-light summary {
+     list-style-image: url(../images/arrow-closed-dark.png);
+}
+
+.accordian-light summary::-webkit-details-marker {
+     background: url(../images/arrow-closed-dark.png);
+     color: transparent;
+}
+
+.accordian-light summary:focus {
+	list-style-image: url(../images/arrow-closed-light.png);
+	outline: none;
+}
+
+.accordian-light summary:focus::-webkit-details-marker {
+     background: url(../images/arrow-closed-light.png);
+     color: transparent;
+     outline: none;
+}
+
+.accordian-light[open] summary, .accordian-light summary:focus {
+	background-color: var(--color-primary);
+	border-bottom: 0.125rem solid var(--color-secondary);
+	color: var(--color-tertiary);
+	outline: none;
+}
+
+.accordian-light[open] summary {
+	list-style-image: url(../images/arrow-open-light.png);
+}
+
+.accordian-light[open] summary::-webkit-details-marker {
+	background: url(../images/arrow-open-light.png);
+	color: transparent;
+}
+
+/*Dark Theme Accordians*/
+
+.accordian-dark {
+	background-color: var(--color-primary);
+	color: var(--color-tertiary);
+}
+
+.accordian-dark summary {
+     list-style-image: url(../images/arrow-closed-light.png);
+}
+
+.accordian-dark summary::-webkit-details-marker {
+     background: url(../images/arrow-closed-light.png);
+     color: transparent;
+}
+
+.accordian-dark summary:focus {
+	list-style-image: url(../images/arrow-closed-dark.png);
+	outline: none;
+}
+
+.accordian-dark summary:focus::-webkit-details-marker {
+     background: url(../images/arrow-closed-dark.png);
+     color: transparent;
+}
+
+.accordian-dark[open] summary, .accordian-dark summary:focus {
+	background-color: var(--color-tertiary);
+	border-bottom: 0.125rem solid var(--color-secondary);
+	color: var(--color-primary);
+	outline: none;
+}
+
+.accordian-dark[open] summary {
+	list-style-image: url(../images/arrow-open-dark.png);
+}
+
+.accordian-dark[open] summary::-webkit-details-marker {
+	background: url(../images/arrow-open-dark.png);
+	color: transparent;
+}
+
 /* ==========================================================================
    Examples
    ========================================================================== */
