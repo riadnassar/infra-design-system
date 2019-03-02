@@ -210,6 +210,92 @@ footer nav a:active {
 }
 
 /* ==========================================================================
+   Master Component
+   ========================================================================== */
+dialog {
+	animation: beam-in .10s;
+	background-color: var(--color-tertiary);
+	border: .125rem solid var(--color-secondary);
+	box-shadow: .25rem .25rem .625rem var(--color-primary-light);
+	max-width: 625rem;
+}
+
+dialog h6, dialog p {
+	animation: fade .15s;
+}
+
+dialog::backdrop {
+	animation: fade .10s;
+	background-color: rgba(0, 0, 0, .5);
+}
+
+dialog[close] {
+	/*animation: beam-out 10s;*/
+}
+
+@keyframes beam-in{
+	0% {
+		background-color: var(--color-secondary);
+		border-radius: 6.25rem;
+		box-shadow: none;
+		height: 6.25rem;
+		transform: translatey(-50rem);
+		width: .0000001rem;
+	}
+
+	99% {
+		background-color: var(--color-secondary);
+		border-radius: 6.25rem;
+		box-shadow: none;
+		height: 6.25rem;
+		width: .0000001rem;
+	}
+
+	100% {
+		transform: translatey(0);
+	}
+
+}
+
+@keyframes beam-out {
+	0% {
+		transform: translateY(0);
+	}
+
+	1%{
+		background-color: var(--color-secondary);
+		border-radius: 6.25rem;
+		box-shadow: none;
+		height: 6.25rem;
+		width: .0000001rem;
+	}
+
+	100% {
+		background-color: var(--color-secondary);
+		border-radius: 6.25rem;
+		box-shadow: none;
+		height: 6.25rem;
+		transform: translatey(-50rem);
+		width: .0000001rem;
+	}
+}
+
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+
+	85% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+
+}
+
+/* ==========================================================================
    Button Links
    ========================================================================== */
 
