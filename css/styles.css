@@ -229,10 +229,6 @@ dialog::backdrop {
 	background-color: rgba(0, 0, 0, .5);
 }
 
-dialog[close] {
-	/*animation: beam-out 10s;*/
-}
-
 @keyframes beam-in{
 	0% {
 		background-color: var(--color-secondary);
@@ -255,29 +251,6 @@ dialog[close] {
 		transform: translatey(0);
 	}
 
-}
-
-@keyframes beam-out {
-	0% {
-		transform: translateY(0);
-	}
-
-	1%{
-		background-color: var(--color-secondary);
-		border-radius: 6.25rem;
-		box-shadow: none;
-		height: 6.25rem;
-		width: .0000001rem;
-	}
-
-	100% {
-		background-color: var(--color-secondary);
-		border-radius: 6.25rem;
-		box-shadow: none;
-		height: 6.25rem;
-		transform: translatey(-50rem);
-		width: .0000001rem;
-	}
 }
 
 @keyframes fade {
