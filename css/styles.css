@@ -134,7 +134,7 @@ ul {
 }
 
 blockquote {
-	font-family: var(--font-secondary);
+	font-family: var(--font-primary);
 	font-size: var(--xlarge-font);
 	font-style: italic;
 	font-weight: bold;
@@ -146,6 +146,7 @@ blockquote p {
 
 cite {
 	font-size: var(--large-font);
+	font-style: none;
 }
 
 .logo {
@@ -156,9 +157,13 @@ cite {
 /* ==========================================================================
    Master Layout
    ========================================================================== */
+body {
+	margin: 0;
+}
+
 main {
 	margin:auto;
-	max-width: 65rem;
+	max-width: 55rem;
 }
 
 /* ==========================================================================
@@ -167,6 +172,7 @@ main {
 header {
 	background-color: var(--color-primary);
 	color: var(--color-tertiary);
+	margin-bottom: 6.25rem;
 	padding: 2rem;
 }
 
@@ -193,7 +199,7 @@ header nav a:hover, header nav a:focus {
 footer {
 	background-color: var(--color-primary-light);
 	color: var(--color-tertiary);
-	margin-top: 2rem;
+	margin-top: 6.25rem;
 	padding: 2rem;
 }
 
@@ -210,7 +216,7 @@ footer nav a:active {
 }
 
 /* ==========================================================================
-   Master Component
+   Modal Component
    ========================================================================== */
 dialog {
 	animation: beam-in .10s;
@@ -426,7 +432,7 @@ dialog::backdrop {
 }
 
 /* ==========================================================================
-   Accordian
+   Accordion
    ========================================================================== */
 
 details {
@@ -435,87 +441,93 @@ details {
 	margin-bottom: 0.125rem;
 }
 
-/*Light Theme Accordians*/
+details div {
+	margin: 1rem;
+}
+summary {
+	margin-left: 1rem;
+}
+/*Light Theme Accordions*/
 
-.accordian-light {
+.accordion-light {
 	background-color: var(--color-tertiary);
 	color: var(--color-primary);
 }
 
-.accordian-light summary {
+.accordion-light summary {
      list-style-image: url(../images/arrow-closed-dark.png);
 }
 
-.accordian-light summary::-webkit-details-marker {
+.accordion-light summary::-webkit-details-marker {
      background: url(../images/arrow-closed-dark.png);
      color: transparent;
 }
 
-.accordian-light summary:focus {
+.accordion-light summary:focus {
 	list-style-image: url(../images/arrow-closed-light.png);
 	outline: none;
 }
 
-.accordian-light summary:focus::-webkit-details-marker {
+.accordion-light summary:focus::-webkit-details-marker {
      background: url(../images/arrow-closed-light.png);
      color: transparent;
      outline: none;
 }
 
-.accordian-light[open] summary, .accordian-light summary:focus {
+.accordion-light[open] summary, .accordion-light summary:focus {
 	background-color: var(--color-primary);
 	border-bottom: 0.125rem solid var(--color-secondary);
 	color: var(--color-tertiary);
 	outline: none;
 }
 
-.accordian-light[open] summary {
+.accordion-light[open] summary {
 	list-style-image: url(../images/arrow-open-light.png);
 }
 
-.accordian-light[open] summary::-webkit-details-marker {
+.accordion-light[open] summary::-webkit-details-marker {
 	background: url(../images/arrow-open-light.png);
 	color: transparent;
 }
 
-/*Dark Theme Accordians*/
+/*Dark Theme Accordions*/
 
-.accordian-dark {
+.accordion-dark {
 	background-color: var(--color-primary);
 	color: var(--color-tertiary);
 }
 
-.accordian-dark summary {
+.accordion-dark summary {
      list-style-image: url(../images/arrow-closed-light.png);
 }
 
-.accordian-dark summary::-webkit-details-marker {
+.accordion-dark summary::-webkit-details-marker {
      background: url(../images/arrow-closed-light.png);
      color: transparent;
 }
 
-.accordian-dark summary:focus {
+.accordion-dark summary:focus {
 	list-style-image: url(../images/arrow-closed-dark.png);
 	outline: none;
 }
 
-.accordian-dark summary:focus::-webkit-details-marker {
+.accordion-dark summary:focus::-webkit-details-marker {
      background: url(../images/arrow-closed-dark.png);
      color: transparent;
 }
 
-.accordian-dark[open] summary, .accordian-dark summary:focus {
+.accordion-dark[open] summary, .accordion-dark summary:focus {
 	background-color: var(--color-tertiary);
 	border-bottom: 0.125rem solid var(--color-secondary);
 	color: var(--color-primary);
 	outline: none;
 }
 
-.accordian-dark[open] summary {
+.accordion-dark[open] summary {
 	list-style-image: url(../images/arrow-open-dark.png);
 }
 
-.accordian-dark[open] summary::-webkit-details-marker {
+.accordion-dark[open] summary::-webkit-details-marker {
 	background: url(../images/arrow-open-dark.png);
 	color: transparent;
 }
