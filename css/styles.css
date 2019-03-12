@@ -287,20 +287,26 @@ dialog::backdrop {
 /* ==========================================================================
    Button Links
    ========================================================================== */
+.button-light, .button-light:visited {
+	color: var(--color-tertiary);
+}
+
+.button-dark, .button-dark:visited {
+	color: var(--color-primary);
+}
 
 /*Hero Button*/
-.hero-button-light, .hero-button-light:visited {
+.hero-button, .hero-button:visited {
 	background-color: var(--color-secondary);
 	box-shadow: 0.3125rem 0.625rem var(--color-tertiary-dark);
-	color: var(--color-tertiary);
 	font-weight: bold;
 	padding: 1rem 3rem;
 	-webkit-transition: all .5s ease;
 	transition: all .5s ease;
 }
 
-.hero-button-light:hover, .hero-button-light:focus {
-	background-color: var(--color-teriary);
+.hero-button:hover, .hero-button:focus {
+	background-color: transparent;
 	border: 0.0625rem solid var(--color-secondary);
 	box-shadow: 0.625rem 0.3125rem var(--color-tertiary-dark);
 	color: var(--color-secondary);
@@ -310,52 +316,23 @@ dialog::backdrop {
 	transition: all .5s ease;
 }
 
-.hero-button-light:active {
+.hero-button:active {
 	background-color: var(--color-secondary-dark);
 	box-shadow: 0.125rem 0.125rem var(--color-tertiary-dark);
-	color: var(--color-tertiary);
-}
-
-.hero-button-dark, .hero-button-dark:visited {
-	background-color: var(--color-secondary);
-	box-shadow: 0.3125rem 0.625rem var(--color-tertiary-dark);
-	color: var(--color-primary);
-	font-weight: bold;
-	padding: 1rem 3rem;
-	-webkit-transition: all .5s ease;
-	transition: all .5s ease;
-}
-
-.hero-button-dark:hover, .hero-button-dark:focus {
-	background-color: var(--color-primary);
-	border: 0.0625rem solid var(--color-secondary);
-	box-shadow: 0.625rem 0.3125rem var(--color-tertiary-dark);
-	color: var(--color-secondary);
-	outline: none;
-	text-decoration: none;
-	-webkit-transition: all .5s ease;
-	transition: all .5s ease;
-}
-
-.hero-button-dark:active {
-	background-color: var(--color-secondary-dark);
-	box-shadow: 0.125rem 0.125rem var(--color-tertiary-dark);
-	color: var(--color-tertiary);
 }
 
 /*Normal Button*/
 
-.normal-button-light, .normal-button-light:visited {
+.normal-button, .normal-button:visited {
 	background-color: var(--color-secondary);
 	border-radius: 0.625rem;
-	color: var(--color-tertiary);
 	padding: 1rem 1.5rem;
 	-webkit-transition: all .5s ease;
 	transition: all .5s ease;
 }
 
-.normal-button-light:hover, .normal-button-light:focus {
-	background-color: var(--color-teriary);
+.normal-button:hover, .normal-button:focus {
+	background-color: transparent;
 	border: 0.0625rem solid var(--color-secondary);
 	color: var(--color-secondary);
 	outline: none;
@@ -364,38 +341,13 @@ dialog::backdrop {
 	transition: all .5s ease;
 }
 
-.normal-button-light:active {
+.normal-button:active {
 	background-color: var(--color-secondary-dark);
-	color: var(--color-tertiary);
-}
-
-.normal-button-dark, .normal-button-dark:visited {
-	background-color: var(--color-secondary);
-	border-radius: 0.625rem;
-	color: var(--color-primary);
-	padding: 1rem 1.5rem;
-	-webkit-transition: all .5s ease;
-	transition: all .5s ease;
-}
-
-.normal-button-dark:hover, .normal-button-dark:focus {
-	background-color: var(--color-primary);
-	border: 0.0625rem solid var(--color-secondary);
-	color: var(--color-secondary);
-	outline: none;
-	text-decoration: none;
-	-webkit-transition: all .5s ease;
-	transition: all .5s ease;
-}
-
-.normal-button-dark:active {
-	background-color: var(--color-secondary-dark);
-	color: var(--color-tertiary);
 }
 
 /*Ghost Button*/
 
-.ghost-button-light, .ghost-button-light:visited {
+.ghost-button, .ghost-button:visited {
 	background-color: transparent;
 	border: 0.0625rem solid var(--color-secondary);
 	border-radius: 0.625rem;
@@ -406,39 +358,30 @@ dialog::backdrop {
 	transition: ease-out 0.5s;
 }
 
-.ghost-button-light:hover, .ghost-button-light:focus {
-	border: 0.0625rem solid var(--color-tertiary);
+.ghost-button:hover, .ghost-button:focus {
 	box-shadow: inset 0 -6.25rem 0 0 var(--color-secondary);
-	color: var(--color-tertiary);
 	outline: none;
 	text-decoration: none;
 }
 
-.ghost-button-light:active {
+.ghost-button:active {
 	background-color: var(--color-secondary-dark);
 }
 
-.ghost-button-dark, .ghost-button-dark:visited {
-	background-color: transparent;
-	border: 0.0625rem solid var(--color-secondary);
-	border-radius: 0.625rem;
-	box-shadow: inset 0 0 0 0 var(--color-secondary);
-	color: var(--color-secondary);
-	padding: 1rem 1.5rem;
-	-webkit-transition: ease-out 0.5s;
-	transition: ease-out 0.5s;
+.ghost-light:hover, .ghost-light:focus {
+	color:var(--color-tertiary); 
 }
 
-.ghost-button-dark:hover, .ghost-button-dark:focus {
-	border: 0.0625rem solid var(--color-primary);
-	box-shadow: inset 0 -6.25rem 0 0 var(--color-secondary);
-	color: var(--color-primary);
-	outline: none;
-	text-decoration: none;
+.ghost-dark:hover, .ghost-dark:focus {
+	color:var(--color-primary); 
 }
 
-.ghost-button-dark:active {
-	background-color: var(--color-secondary-dark);
+.button-light:active {
+	color:var(--color-tertiary);
+}
+
+.button-dark:active {
+	color:var(--color-primary);
 }
 
 /* ==========================================================================
@@ -460,8 +403,8 @@ summary {
 /*Light Theme Accordions*/
 
 .accordion-light {
-	background-color: var(--color-tertiary);
-	color: var(--color-primary);
+/*	background-color: var(--color-tertiary);
+	color: var(--color-primary);*/
 }
 
 .accordion-light summary {
@@ -630,23 +573,21 @@ input[disabled], textarea[disabled], select[disabled] {
 	transition: all .5s ease;
 }
 
-.button-light {
+.submit-light, .submit-light:visited {
 	border: 0.0625rem solid var(--color-tertiary);
-	border-radius: 0.625rem;
 	color: var(--color-tertiary);
 }
 
-.button-light:active {
+.submit-light:active {
 	color:var(--color-tertiary);
 }
 
-.button-dark {
+.submit-dark, .submit-dark:visited {
 	border: 0.0625rem solid var(--color-primary);
-	border-radius: 0.625rem;
-	color: var(--color-tertiary);
+	color: var(--color-primary);
 }
 
-.button-dark:active {
+.submit-dark:active {
 	color:var(--color-primary);
 }
 
