@@ -552,10 +552,12 @@ input[disabled], textarea[disabled], select[disabled] {
 .submit-button {
 	background-color: var(--color-secondary);
 	border-color: none;
+	border-radius: .625rem;
 	font-family: var(--font-primary);
 	font-size: (--large-font);
-	padding:.5rem 1rem;
+	margin: 0rem .625rem 0.625rem;
 	outline: none;
+	padding:.5rem 1rem;
 	text-transform: uppercase;
 	transition: all .5s ease;
 }
