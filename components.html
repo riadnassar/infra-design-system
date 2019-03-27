@@ -13,16 +13,16 @@
 	</head>
 
 	<body>
-		<header>
+		<header class="header-dark">
 			
 			<div class="logo">Infra</div>
 			
-			<nav class="site-nav">
+			<nav class="primary-nav nav-light">
 				
 				<ul>
 					<li><a href="index.html">Home</a></li>
 					<li><a href="style.html">Style</a></li>
-					<li><a href="components.html">Components</a></li>
+					<li><a class="current-page-light" href="#">Components</a></li>
 					<li><a href="layout.html">Layout</a></li>
 				</ul>
 			</nav>
@@ -159,7 +159,7 @@
 
 			<figure>
 				
-				<button id="open-modal" type="button">Open Light Modal</button>
+				<button class="submit-light" id="open-modal" type="button">Open Light Modal</button>
 
 				<dialog id="modal-demo">
 
@@ -298,6 +298,60 @@
 				</form>
 			</figure>
 
+			<h2>Navigation</h2>
+
+			<h3>Primary Navigation</h3>
+
+			<h4>Light Theme</h4>
+
+			<figure>
+				<header class="header-dark">
+					<nav class="primary-nav nav-light">
+					
+						<ul>
+							<li><a href="#">Page 1</a></li>
+							<li><a href="#">Page 2</a></li>
+							<li><a class="current-page-light" href="#">Page 3 (Current Page)</a></li>
+							<li><a href="#">Page 4</a></li>
+						</ul>
+					</nav>
+				</header>
+			</figure>
+
+			<h4>Dark Theme</h4>
+
+			<figure>
+				<header class="header-light">
+					<nav class="primary-nav nav-dark">
+					
+						<ul>
+							<li><a href="#">Page 1</a></li>
+							<li><a href="#">Page 2</a></li>
+							<li><a class="current-page-dark" href="#">Page 3 (Current Page)</a></li>
+							<li><a href="#">Page 4</a></li>
+						</ul>
+					</nav>
+				</header>
+			</figure>
+
+			<h3>Secondary Navigation</h3>
+
+			<figure>
+				<footer>
+					<nav class="secondary-nav">
+						<ul>
+							<li><a href="">Link 1</a>
+								<ul>
+									<li><a href="">Link 1a</a></li>
+								</ul>
+							</li>
+							<li><a href="">Link 2</a></li>
+							<li><a href="">Link 3</a></li>
+						</ul>
+					</nav>
+				</footer>
+			</figure>
+
 		</main>
 
 		<footer class="tertiary-text">
@@ -307,7 +361,7 @@
 			<!-- Short Bio -->
 			<p>Riad Nassar is a User Experience Designer. He has an interest in Interaction Design, especially Human-Robot Interaction. He has a background in Psychology and Computer Science. When he's not designing, he likes to Judge local Robotics Competitions.</p>
 
-			<nav class="professional-nav">
+			<nav class="secondary-nav">
 				<ul>
 					<li><a href="https://www.linkedin.com/in/riad-nassar-10a75497">Linkedin</a></li>
 					<li><a href="https://www.twitch.tv/egyptiangunslinger">Twitch</a></li>

@@ -36,7 +36,7 @@ html {
     --font-secondary: 'Orbitron', Arial, sans-serif;
 
     /*Font Sizes*/
-    --ratio: 1.250;
+    --ratio: 1.1;
 
     /*larger than normal*/
 	--xxxxxlarge-font: calc(var(--xxxxlarge-font) * var(--ratio));
@@ -118,10 +118,6 @@ h6{
 	font-size: var(--large-font);
 }
 
-nav li {
-	display: inline;
-}
-
 p {
 	line-height: 2rem;
 }
@@ -164,6 +160,12 @@ label {
 	font-weight: bold;
 }
 
+@media (min-width: 600px) {
+	html {
+		--ratio: 1.250;
+	}
+}
+
 /* ==========================================================================
    Master Layout
    ========================================================================== */
@@ -172,35 +174,47 @@ body {
 }
 
 main {
-	margin:auto;
-	max-width: 55rem;
+	margin: auto;
+	max-width: 20rem;
+}
+
+@media (min-width: 480px) {
+	main {
+		margin: auto;
+		max-width: 25rem
+	}
+}
+
+@media (min-width: 600px) {
+	main {
+		margin: auto;
+		max-width: 35rem;
+	}
+}
+
+@media (min-width: 950px) {
+	main {
+		margin: auto;
+		max-width: 55rem;
+	}
 }
 
 /* ==========================================================================
    Header Component
    ========================================================================== */
 header {
-	background-color: var(--color-primary);
-	color: var(--color-tertiary);
 	margin-bottom: 6.25rem;
 	padding: 2rem;
 }
 
-header nav li {
-	border: solid 0.0625rem var(--color-secondary);
-	border-radius: 0.625rem;
-}
-
-header nav a {
-	padding: 0 0.625rem;
-}
-
-header nav a:hover, header nav a:focus {
-	background-color: var(--color-secondary);
-	border: solid 0.0625rem var(--color-tertiary);
-	border-radius: 62.5rem;
+.header-dark {
+	background-color: var(--color-primary);
 	color: var(--color-tertiary);
-	outline: none;
+}
+
+.header-light {
+	background-color: var(--color-teriary);
+	color: var(--color-primary);
 }
 
 /* ==========================================================================
@@ -211,18 +225,6 @@ footer {
 	color: var(--color-tertiary);
 	margin-top: 6.25rem;
 	padding: 2rem;
-}
-
-footer nav ul {
-	padding: 0;
-}
-
-footer nav a {
-	padding: 0 0.625rem;
-}
-
-footer nav a:active {
-	color: var(--color-tertiary);
 }
 
 /* ==========================================================================
@@ -508,7 +510,7 @@ input {
 	min-width: 10rem;
 }
 
-input[type="submit"] {
+button, input[type="submit"] {
 	min-height: 0;
 	min-width: 0;
 }
@@ -518,7 +520,7 @@ textarea {
 	min-width: 25rem;
 }
 
-input:focus, textarea:focus, select:focus {
+button:focus, input:focus, textarea:focus, select:focus {
 	border: .250rem solid var(--color-secondary-light);
 	outline: none;
 }
@@ -591,6 +593,83 @@ button:active, input[type="submit"]:active {
 
 .submit-dark:active {
 	color:var(--color-primary);
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+nav li {
+	list-style-type: none;
+	margin: 0.625rem 0;
+}
+.nav-light a:hover, .nav-light a:focus {
+	background-color: var(--color-secondary);
+	border: solid 0.0625rem var(--color-tertiary);
+	border-radius: .625rem;
+	color: var(--color-tertiary);
+}
+
+.nav-dark a:hover, .nav-dark a:focus {
+	background-color: var(--color-secondary);
+	border: solid 0.0625rem var(--color-primary);
+	border-radius: .625rem;
+	color: var(--color-primary);
+}
+
+.primary-nav a {
+	border: solid 0.0625rem var(--color-secondary);
+	border-radius: 0.625rem;
+	padding: 0 0.625rem;
+}
+
+
+.primary-nav a:hover, .primary-nav a:focus {
+	outline: none;
+}
+
+.primary-nav .current-page-light {
+	border: solid 0.0625rem var(--color-tertiary);
+	border-radius: 0.625rem;
+}
+
+.primary-nav .current-page-dark {
+	border: solid 0.0625rem var(--color-primary);
+	border-radius: 0.625rem;
+}
+
+.primary-nav .current-page-light, .primary-nav .current-page-light:hover, .primary-nav .current-page-light:focus, .primary-nav .current-page-light:visited, .primary-nav .current-page-light:active {
+	background-color: transparent;
+	color: var(--color-tertiary);
+	outline: none;
+	text-decoration: none;
+}
+
+.primary-nav .current-page-dark, .primary-nav .current-page-dark:hover, .primary-nav .current-page-dark:focus, .primary-nav .current-page-dark:visited, .primary-nav .current-page-dark:active {
+	background-color: transparent;
+	color: var(--color-primary);
+	outline: none;
+	text-decoration: none;
+}
+.secondary-nav ul {
+	padding: 0;
+}
+
+.secondary-nav li li {
+	padding-left: 1.250rem;
+}
+.secondary-nav a {
+	padding: 0 0.625rem;
+}
+
+.secondary-nav a:active {
+	color: var(--color-tertiary);
+}
+
+@media (min-width: 950px) {
+	.primary-nav li {
+		display: inline;
+	}
 }
 
 /* ==========================================================================
