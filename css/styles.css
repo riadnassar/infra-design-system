@@ -675,6 +675,56 @@ nav li {
 /* ==========================================================================
    Examples
    ========================================================================== */
+.notification {
+	align-items: center;
+	background-color: var(--color-tertiary-dark);
+	border: solid .0625rem var(--color-primary);
+	color: var(--color-primary);
+	display: flex;
+	justify-content: flex-start;
+	padding-left: 1.25rem
+}
+
+.notification p {
+	padding-left: 1.25rem;
+}
+
+.notification-error {
+	background-color: var(--color-secondary);
+	border: solid .0625rem var(--color-tertiary);
+	color: var(--color-tertiary);
+}
+
+.notification-warning {
+	background-color: var(--color-primary);
+	border: solid .0625rem var(--color-tertiary);
+	color: var(--color-tertiary);
+}
+
+.notification-success {
+	background-color: var(--color-tertiary);
+}
+
+/* ==========================================================================
+   Hero Block
+   ========================================================================== */
+
+.hero {
+	align-items: center;
+	background: url(../images/fair_use_image.png) no-repeat center;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: center;
+}
+
+.hero-light {
+	color: var(--color-tertiary);
+}
+/* ==========================================================================
+   Examples
+   ========================================================================== */
 
 figure {
 	border-left: 0.0625rem solid var(--color-secondary-dark);
