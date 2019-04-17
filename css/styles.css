@@ -671,7 +671,7 @@ nav li {
 }
 
 /* ==========================================================================
-   Examples
+   Notifications
    ========================================================================== */
 .notification {
 	align-items: center;
@@ -713,7 +713,7 @@ nav li {
 	background-size: cover;
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
+	max-height: 100vh;
 	justify-content: center;
 }
 
@@ -724,30 +724,37 @@ nav li {
 /* ==========================================================================
    Cards
    ========================================================================== */
-a .card {
+.card {
 	background-color: var(--color-tertiary);
 	border-radius: .625rem;
 	color: var(--color-primary);
 }
 
-a:hover .card, a:focus .card {
+.post:hover, .post:focus {
 	background-color: var(--color-tertiary-dark);
+	color: var(--color-primary);
 }
 
 .card {
-	display: inline-block;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
 	padding: .125rem .625rem;
 }
 
+.card div {
+	margin-left: .625rem;
+}
+
 .post, .profile {
-	max-width: 14.5875rem;
+	max-width: 25rem;
 }
 
 .profile {
 	align-items: center;
 	background-color: var(--color-tertiary-dark);
 	border-radius: .625rem;
-	display: flex-inline;
+	display: inline-flex;
 	flex-direction: column;
 	padding: .625rem;
 }
@@ -763,6 +770,29 @@ a:hover .card, a:focus .card {
 .container h6 {
 	margin-top: .625rem;
 }
+
+.post h6 {
+	display: block;
+	margin: var(--margin-standard);
+	max-height: 2.5rem;
+	overflow: hidden;
+	position: relative;
+}
+
+.post h6:before {
+	bottom: 0;
+	content: '...';
+	position: absolute;
+	right: 0;
+}
+
+.post h6:after {
+	bottom: 0;
+	content: '';
+	position: absolute;
+	right: 0;
+}
+
 .post footer {
 	background-color: transparent;
 	color: var(--color-primary);
@@ -771,21 +801,12 @@ a:hover .card, a:focus .card {
 }
 
 .post p {
-	margin: var(--margin-standard);
-}
-
-.post p {
-	max-height: 6rem;
-	overflow: hidden;
-	position: relative;
+	display: none;
 
 }
 
-.post p:before {
-	bottom: 0;
-	content: '...';
-	position: absolute;
-	right: 0;
+.post img {
+	max-width: 12.5rem;
 }
 
 .call-to-action {
@@ -803,6 +824,122 @@ a:hover .card, a:focus .card {
 
 .call-to-action .hero-button {
 	margin: .625rem .625rem 1.25rem;
+}
+
+@media (min-width: 512px) {
+	.card div {
+		margin-left: initial;
+	}
+	.post {
+		display: inline-block;
+		padding: .125rem .625rem;
+	}
+
+	.post p {
+		display: block;
+		margin: var(--margin-standard);
+		max-height: 6rem;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.post p:before {
+		bottom: 0;
+		content: '...';
+		position: absolute;
+		right: 0;
+	}
+
+	.post p:after {
+		bottom: 0;
+		content: '';
+		position: absolute;
+		right: 0;
+	}
+
+	.post, .profile {
+		max-width: 14.5875rem;
+	}
+	.call-to-action{
+		max-width: 50%;
+	}
+}
+
+@media (min-width: 1012px) {
+	.post p {
+		display: block;
+		margin: var(--margin-standard);
+		max-height: 10rem;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.post, .profile {
+		max-width: 25rem;
+	}
+
+	.call-to-action{
+		max-width: 100%;
+	}
+
+}
+
+/* ==========================================================================
+   Grid
+   ========================================================================== */
+
+.grid-post {
+	background-color: var(--color-primary-light);
+	display: grid;
+	grid-gap: 2rem;
+	margin: .625rem;
+	padding: .625rem;
+}
+
+.grid-callouts {
+	display: grid;
+	grid-gap: 1rem;
+	margin: .625rem;
+}
+
+@media (min-width: 512px) {
+	.grid-post {
+		grid-template-columns: repeat(2,1fr);
+	}
+}
+
+@media (min-width: 770px) {
+	.grid-post {
+		grid-template-columns: repeat(3,1fr);
+	}
+
+	.featured-post {
+		grid-column: 1 / span 2;
+		grid-row: 1 / span 2;
+		max-width: initial;
+	}
+
+	.featured-post img {
+		max-width: 18.75rem;
+	}
+}
+
+@media (min-width: 1012px) {
+	.grid-post {
+		grid-template-columns: repeat(4,1fr);
+	}
+	
+	.grid-callouts {
+		grid-template-columns: repeat(3,1fr); 
+	}
+	.featured-post {
+		grid-column: 1 / span 3;
+		grid-row: 1 / span 2;
+	}
+
+	.featured-post img {
+		max-width: 31.25rem;
+	}
 }
 
 /* ==========================================================================
