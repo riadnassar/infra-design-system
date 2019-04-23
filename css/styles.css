@@ -160,6 +160,22 @@ label {
 	font-weight: bold;
 }
 
+.featured-text {
+	font-size: var(--large-font);
+	font-style: italic;
+}
+
+.tertiary-text{
+	font-size: var(--small-font);
+}
+.primary-font {
+	font-family: var(--font-primary);
+}
+
+.secondary-font{
+	font-family: var(--font-secondary);
+}
+
 @media (min-width: 600px) {
 	html {
 		--ratio: 1.250;
@@ -176,6 +192,10 @@ body {
 main {
 	margin: auto;
 	max-width: 20rem;
+}
+
+img {
+	max-width: 100%;
 }
 
 @media (min-width: 480px) {
@@ -204,7 +224,7 @@ main {
    ========================================================================== */
 header {
 	margin-bottom: 6.25rem;
-	padding: 2rem;
+	padding-top: 2rem;
 }
 
 .header-dark {
@@ -213,7 +233,7 @@ header {
 }
 
 .header-light {
-	background-color: var(--color-teriary);
+	background-color: var(--color-tertiary);
 	color: var(--color-primary);
 }
 
@@ -596,6 +616,9 @@ button:active, input[type="submit"]:active {
 /* ==========================================================================
    Navigation
    ========================================================================== */
+nav{
+	padding-bottom: 2rem;
+}
 
 nav li {
 	list-style-type: none;
@@ -713,8 +736,9 @@ nav li {
 	background-size: cover;
 	display: flex;
 	flex-direction: column;
-	max-height: 100vh;
 	justify-content: center;
+	max-height: 100vh;
+	padding: 10rem 0;
 }
 
 .hero-light {
@@ -746,10 +770,6 @@ nav li {
 	margin-left: .625rem;
 }
 
-.post, .profile {
-	max-width: 25rem;
-}
-
 .profile {
 	align-items: center;
 	background-color: var(--color-tertiary-dark);
@@ -774,7 +794,7 @@ nav li {
 .post h6 {
 	display: block;
 	margin: var(--margin-standard);
-	max-height: 2.5rem;
+	max-height: 3rem;
 	overflow: hidden;
 	position: relative;
 }
@@ -857,9 +877,6 @@ nav li {
 		right: 0;
 	}
 
-	.post, .profile {
-		max-width: 14.5875rem;
-	}
 	.call-to-action{
 		max-width: 50%;
 	}
@@ -872,10 +889,6 @@ nav li {
 		max-height: 10rem;
 		overflow: hidden;
 		position: relative;
-	}
-
-	.post, .profile {
-		max-width: 25rem;
 	}
 
 	.call-to-action{
@@ -891,8 +904,8 @@ nav li {
 .grid-post {
 	background-color: var(--color-primary-light);
 	display: grid;
-	grid-gap: 2rem;
-	margin: .625rem;
+	grid-gap: 1rem;
+/*	margin: .625rem;*/
 	padding: .625rem;
 }
 
@@ -902,15 +915,19 @@ nav li {
 	margin: .625rem;
 }
 
-@media (min-width: 512px) {
+@media (min-width: 600px) {
 	.grid-post {
 		grid-template-columns: repeat(2,1fr);
 	}
 }
 
-@media (min-width: 770px) {
+@media (min-width: 950px) {
 	.grid-post {
 		grid-template-columns: repeat(3,1fr);
+	}
+
+	.grid-callouts {
+		grid-template-columns: repeat(3,1fr); 
 	}
 
 	.featured-post {
@@ -924,9 +941,9 @@ nav li {
 	}
 }
 
-@media (min-width: 1012px) {
+@media (min-width: 1150px) {
 	.grid-post {
-		grid-template-columns: repeat(4,1fr);
+		/*grid-template-columns: repeat(4,1fr);*/
 	}
 	
 	.grid-callouts {
@@ -952,18 +969,3 @@ figure {
 	padding: 0.625rem;
 }
 
-.featured-text {
-	font-size: var(--large-font);
-	font-style: italic;
-}
-
-.tertiary-text{
-	font-size: var(--small-font);
-}
-.primary-font {
-	font-family: var(--font-primary);
-}
-
-.secondary-font{
-	font-family: var(--font-secondary);
-}
