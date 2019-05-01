@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Components</title>
+
+		<link rel="stylesheet" href="css/styles.css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i|Orbitron&amp;subset=latin-ext" rel="stylesheet">
+
+	</head>
+
+	<body>
+		<header class="header-dark">
+			
+			<div class="logo">Infra</div>
+			
+			<nav class="primary-nav nav-light">
+				
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="style.html">Style</a></li>
+					<li><a class="current-page-light" href="#">Components</a></li>
+					<li><a href="layout.html">Layout</a></li>
+				</ul>
+			</nav>
+			
+		</header>
+
+		<main>
+			
+			<h1>Infra Components</h1>
+
+			<h2>Button Links</h2>
+
+			<h3>Hero Buttons</h3>
+			
+			<h4>Light Theme</h4>
+
+			<figure>
+				<a class="hero-button" href="">Button</a>
+			</figure>
+
+			<h4>Dark Theme</h4>
+			
+			<figure>
+				<a class="hero-button button-dark" href="">Button</a>
+			</figure>
+
+			<h3>Normal Button</h3>
+
+			<h4>Light Theme</h4>
+
+			<figure>
+				<a class="normal-button" href="">Button</a>
+			</figure>
+
+			<h4>Dark Theme</h4>
+
+			<figure>
+				<a class="normal-button button-dark" href="">Button</a>
+			</figure>
+
+			<h3>Ghost Buttons</h3>
+
+			<p>Please note that the ghost buttons have a transparent background in their default state, they are not white.</p>
+			
+			<h4>Light Theme</h4>
+
+			<figure>
+				<a class="ghost-button" href="">Button</a>
+			</figure>
+
+			<h4>Dark Theme</h4>
+
+			<figure>
+				<a class="ghost-button ghost-dark" href="">Button</a>
+			</figure>
+
+			<h2>Accordions</h2>
+
+			<h4>Light Theme</h4>
+
+			<figure>
+				<details class="accordion-light">
+					<summary>Option 1:</summary>
+
+					<div>
+
+						<p>Lorum Ispum</p>
+
+					</div>
+
+				</details>
+
+				<details class="accordion-light">
+					<summary>Option 2:</summary>
+					
+					<div>
+
+						<p>Lorum Ispum</p>
+
+					
+					</div>
+				</details>
+
+				<details class="accordion-light">
+					<summary>Option 3:</summary>
+					
+					<div>
+
+						<p>Lorum Ispum</p>
+
+					</div>
+
+				</details>
+			</figure>
+
+			<h4>Dark Theme</h4>
+
+			<figure>
+				<details class="accordion-dark">
+					<summary>Option 1:</summary>
+
+					<div>
+
+						<p>Lorum Ispum</p>
+
+					</div>
+
+				</details>
+
+				<details class="accordion-dark">
+					<summary>Option 2:</summary>
+					
+					<div>
+
+						<p>Lorum Ispum</p>
+
+					
+					</div>
+				</details>
+
+				<details class="accordion-dark">
+					<summary>Option 3:</summary>
+					
+					<div>
+
+						<p>Lorum Ispum</p>
+
+					</div>
+
+				</details>
+			</figure>
+
+			<h2>Modal Dialog</h2>
+
+			<figure>
+				
+				<button class="submit-light" id="open-modal" type="button">Open Light Modal</button>
+
+				<dialog id="modal-demo">
+
+					<h6>This is a Modal</h6>
+
+					<p>It appears when you least expect it.</p>
+
+				</dialog>
+
+			</figure>
+
+			<h2>Form Inputs</h2>
+
+			<h4>Light Theme</h4>
+
+			<figure>
+				
+				<form action="">
+
+					<h5>Text Field</h5>
+
+					<label for="text">Text</label>
+					<p class="helper-text helper-light">This is what helper text looks like in light theme</p>
+					<input type="text" id="text" name="text" placeholder="Put in text.">
+
+					<label for="disabled-text">Disabled Text</label>
+					<input type="text" id="disabled-text" name="disabled-text" placeholder="Can't put in text." disabled>
+
+					<label for="error-text">Error Text</label>
+					<input type="text" id="error-text" name="error-text" placeholder="Put in text." class="error">
+
+					<h5>Text Area</h5>
+
+					<label for="textarea">Textarea</label>
+					<textarea id="textarea" name="textarea" placeholder="Put even more text here."></textarea>
+
+					<label for="disabled-textarea">Disabled Textarea</label>
+					<textarea id="disabled-textarea" name="diabled-textarea" placeholder="Can't put even more text here." disabled></textarea>
+
+					<label for="error-textarea">Error Textarea</label>
+					<textarea id="error-textarea" name="error-textarea" placeholder="Put even more text here." class="error"></textarea>
+
+					<h5>Select</h5>
+
+					<label for="select">Select</label>
+					<select id="select" name="select">
+						<option value="" selected disabled hidden>Select one</option>
+						<option>Option 1</option>
+						<option>Option 2</option>
+						<option>Option 3</option>
+					</select>
+
+					<label for="disabled-select">Disabled Select</label>
+					<select id="disabled-select" name="disabled-select" disabled>
+						<option value="" selected disabled hidden>Select one</option>
+						<option>Option 1</option>
+						<option>Option 2</option>
+						<option>Option 3</option>
+					</select>
+
+					<label for="error-select">Error Select</label>
+					<select id="error-select" name="error-select" class="error">
+						<option value="" selected disabled hidden>Select one</option>
+						<option>Option 1</option>
+						<option>Option 2</option>
+						<option>Option 3</option>
+					</select>
+					
+					<h5>Submit/Button</h5>
+
+					<input type="submit" value="Submit" class="submit-light">
+
+				</form>
+
+			</figure>
+
+			<h4>Dark Theme</h4>
+
+			<figure>
+				
+				<form class="darkness" action="">
+					
+					<h5>Text Field</h5>
+
+					<label for="text">Text</label>
+					<p class="helper-text helper-dark">This is what helper text looks like in dark theme</p>
+					<input type="text" id="text" name="text" placeholder="Put in text.">
+
+					<label for="diabled-text">Disabled Text</label>
+					<input type="text" id="disabled-text" name="disabled-text" placeholder="Can't put in text." disabled>
+
+					<label for="error-text">Error Text</label>
+					<input type="text" id="error-text" name="error-text" placeholder="Put in text." class="error">
+
+					<h5>Text Area</h5>
+
+					<label for="textarea">Textarea</label>
+					<textarea id="textarea" name="textarea" placeholder="Put even more text here."></textarea>
+
+					<label for="disabled-textarea">Disabled Textarea</label>
+					<textarea id="disabled-textarea" name="diabled-textarea" placeholder="Can't put even more text here." disabled></textarea>
+
+					<label for="error-textarea">Error Textarea</label>
+					<textarea id="error-textarea" name="error-textarea" placeholder="Put even more text here." class="error"></textarea>
+
+					<h5>Select</h5>
+
+					<label for="select">Select</label>
+					<select id="select" name="select">
+						<option value="" selected disabled hidden>Select one</option>
+						<option>Option 1</option>
+						<option>Option 2</option>
+						<option>Option 3</option>
+					</select>
+
+					<label for="disabled-select">Disabled Select</label>
+					<select id="disabled-select" name="disabled-select" disabled>
+						<option value="" selected disabled hidden>Select one</option>
+						<option>Option 1</option>
+						<option>Option 2</option>
+						<option>Option 3</option>
+					</select>
+
+					<label for="error-select">Error Select</label>
+					<select id="error-select" name="error-select" class="error">
+						<option value="" selected disabled hidden>Select one</option>
+						<option>Option 1</option>
+						<option>Option 2</option>
+						<option>Option 3</option>
+					</select>
+					
+					<h5>Submit/Button</h5>
+
+					<input type="submit" value="Submit" class="submit-dark">
+
+				</form>
+			</figure>
+
+			<h2>Navigation</h2>
+
+			<h3>Primary Navigation</h3>
+
+			<h4>Light Theme</h4>
+
+			<figure>
+				<header class="header-dark">
+					<nav class="primary-nav nav-light">
+					
+						<ul>
+							<li><a href="#">Page 1</a></li>
+							<li><a href="#">Page 2</a></li>
+							<li><a class="current-page-light" href="#">Page 3 (Current Page)</a></li>
+							<li><a href="#">Page 4</a></li>
+						</ul>
+					</nav>
+				</header>
+			</figure>
+
+			<h4>Dark Theme</h4>
+
+			<figure>
+				<header class="header-light">
+					<nav class="primary-nav nav-dark">
+					
+						<ul>
+							<li><a href="#">Page 1</a></li>
+							<li><a href="#">Page 2</a></li>
+							<li><a class="current-page-dark" href="#">Page 3 (Current Page)</a></li>
+							<li><a href="#">Page 4</a></li>
+						</ul>
+					</nav>
+				</header>
+			</figure>
+
+			<h3>Secondary Navigation</h3>
+
+			<figure>
+				<footer>
+					<nav class="secondary-nav">
+						<ul>
+							<li><a href="">Link 1</a>
+								<ul>
+									<li><a href="">Link 1a</a></li>
+								</ul>
+							</li>
+							<li><a href="">Link 2</a></li>
+							<li><a href="">Link 3</a></li>
+						</ul>
+					</nav>
+				</footer>
+			</figure>
+
+			<h2>Notification</h2>
+			
+			<h3>Error</h3>
+			<figure>
+				<div class="notification notification-error featured-text">
+					<img src="images/note-error.png">
+					<p>This is an Error notification</p>
+				</div>
+			</figure>
+			
+			<h3>Warning</h3>
+			<figure>
+				<div class="notification notification-warning featured-text">
+					<img src="images/note-warning.png">
+					<p>This is a Warning notification</p>
+				</div>
+			</figure>
+			
+			<h3>Neutral</h3>
+			<figure>
+				<div class="notification notification-neutral featured-text">
+					<img src="images/note-neutral.png">
+					<p>This is a Nuetral notification</p>
+				</div>
+			</figure>
+			
+			<h3>Success</h3>
+			<figure>
+				<div class="notification notification-success featured-text">
+					<img src="images/note-success.png">
+					<p>This is a Success notification</p>
+				</div>
+			</figure>
+
+			<h2>Hero Block</h2>
+
+			<figure>
+				<a href="hero-block.html"><img src="images/hero_example.png" alt="hero block example"></a>
+			</figure>
+
+			<h2>Information Cards</h2>
+			
+			<h3>Article/Post</h3>
+			
+			<figure>
+				<a class="card post" href="#">
+					<div>
+						<h6>Title</h6>
+						<div>Date and Time</div>
+					</div>
+					<img src="images/Welcome-to-Big-Bend-National-Park-small.jpg" alt="Big Bend National Park">
+					<p>Example of Exerpt from the Article or Post. The Article or post would probably be at least a paragragh long but you wouldn't see the whole thing. You would click on the card to reveal the full Article. There is a big version for the top post or breaking news article and a small version for the rest of the articles.</p>
+				</a>
+			</figure>
+			
+			<h3>Person/Profile</h3>
+			
+			<figure>
+				<div class="card profile">
+					<img src="images/Princess Lumpybottom.jpeg" alt="Princess Lumpybottom">
+					<div class="container">
+						<h6>Name</h6>
+						<p>Email</p>
+						<a href="#">email_address@isp.notreal</a>
+						<p>Phone #</p>
+						<a href="tel:7-466-368-6237">7-466-368-6237</a>
+					</div>
+				</div>
+			</figure>
+			
+			<h3>Call to Action</h3>
+			
+			<figure>
+				<div class="card call-to-action">
+					<p class="featured-text">Example of a Call to action</p>
+					<img src="images/generic-image.jpg" alt="generic image">
+					<a class="hero-button button-light" href="">Click Now</a>
+				</div>
+			</figure>
+		</main>
+
+		<footer class="tertiary-text">
+			
+			<p>Infra Design System was created by Riad Nassar. Any similarities to other design systems is purely coincidental.</p>
+
+			<!-- Short Bio -->
+			<p>Riad Nassar is a User Experience Designer. He has an interest in Interaction Design, especially Human-Robot Interaction. He has a background in Psychology and Computer Science. When he's not designing, he likes to Judge local Robotics Competitions.</p>
+
+			<nav class="secondary-nav">
+				<ul>
+					<li><a href="https://www.linkedin.com/in/riad-nassar-10a75497">Linkedin</a></li>
+					<li><a href="https://www.twitch.tv/egyptiangunslinger">Twitch</a></li>
+					<li><a href="https://waitbutwhy.com/2013/08/the-bunny-manifesto.html">Bunny Manifesto (Not my site)</a></li>
+				</ul>
+			</nav>
+			
+			<!-- Copyright -->
+			<p>Copyright 2019. All rights reserved</p>
+
+		</footer>
+
+		<script>
+			
+			document.addEventListener('DOMContentLoaded', function(){
+
+				const modal = document.querySelector('dialog');
+				const open = document.getElementById('open-modal');
+
+				open.addEventListener('click', () => {
+					modal.showModal();
+				});
+
+				modal.addEventListener('click', event => {
+					if (event.target === modal) {
+						modal.close('cancelled');
+					}
+				});
+
+			});
+
+		</script>
+
+
+
+	</body>
+
+</html>
